@@ -1,0 +1,37 @@
+body{
+  font-family: 'Bitter', serif;
+}
+
+.left {
+  float: left;
+  box-sizing: border-box;
+  width: 25%;
+  height: 970px;
+  background: #444;
+}
+
+.right {
+  float: left;
+  box-sizing: border-box;
+  width: 25%;
+  height: 970px;
+  background: #444;
+}
+
+section {
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+  height: 970px;
+  background: #444;
+  text-align: center;
+}
+
+img{
+  position: relative;
+  width: 95%
+}
+
+p{
+  position: absolute;
+}
