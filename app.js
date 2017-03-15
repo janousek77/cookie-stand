@@ -2,8 +2,6 @@
 
 var hours = ['Stores','8am', '9am', '10am' , '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Totals'];
 
-var inputs = document.getElementsByTagName('input');
-var inputData = inputs[i];
 var body = document.getElementsByTagName('body')[0];
 var allStores = [];
 
@@ -70,3 +68,17 @@ table();
 for (var i = 0; i < allStores.length; i++){
   allStores[i].rows();
 }
+
+var form = document.getElementById('the-form');
+function formElementSubmit(event) {
+  event.preventDefault();
+  var theFormItself = event.target;
+  var inputs = document.getElementsByClassName('inputs');
+  var inputData = inputs.value;
+  var storeInputs = [];
+  for (var i = 0; i < inputs.length; i++){
+    console.log(inputData);
+    this.storeInputs.push(inputData);
+  }
+};
+form.addEventListener('submit', formElementSubmit);
