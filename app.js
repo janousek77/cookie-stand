@@ -1,14 +1,18 @@
 'strict';
 
 var hours = ['Stores','8am', '9am', '10am' , '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Totals'];
+
+var inputs = document.getElementsByTagName('input');
+var inputData = inputs[i];
 var body = document.getElementsByTagName('body')[0];
 var allStores = [];
 
-var first = new Store('1st and Pike', 23, 65, 6.3);
-var seatac = new Store('Seatac Airport', 3, 24, 1.2);
-var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
-var capHill = new Store('Capitol Hill', 20, 38, 2.3);
-var alki = new Store('Alki', 2, 16, 4.6);
+// var first = new Store('1st and Pike', 23, 65, 6.3);
+// var seatac = new Store('Seatac Airport', 3, 24, 1.2);
+// var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
+// var capHill = new Store('Capitol Hill', 20, 38, 2.3);
+// var alki = new Store('Alki', 2, 16, 4.6);
+// var storeInputs = new Store(inputData[i]);
 
 function Store(sname, min, max, aveCookies) {
   this.name = sname;
