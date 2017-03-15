@@ -1,6 +1,6 @@
 'strict';
 
-var hours = ['','8am', '9am', '10am' , '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var hours = ['Stores','8am', '9am', '10am' , '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'totals'];
 var body = document.getElementsByTagName('body')[0];
 
 var first = new store('1st and Pike', 23, 65, 6.3);
@@ -20,12 +20,13 @@ function store(sname, min, max, aveCookies) {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
   };
   this.cookiesSold = function () {
-    this.randomCustPerHour();
-    for (var i = 0; i < hours.length - 1; i++) {
+    for (var i = 0; i < hours.length - 2; i++) {
       var cookiesPerHour = Math.ceil(this.avgCookies * this.randomCustPerHour());
       this.hourlySales.push(cookiesPerHour);
       this.total += cookiesPerHour;
     }
+    this.hourlySales.push(this.total);
+    console.log(this.total);
   };
   this.rows = function(){
     this.cookiesSold();
@@ -38,7 +39,7 @@ function store(sname, min, max, aveCookies) {
     tData.innerText = this.name;
     tableRow.appendChild(tData);
     for (var i = 0; i < hours.length - 1; i++){
-      var data = document.createElement('td');
+      var data = document.createElement('td');;
       data.innerText = this.hourlySales[i];
       tableRow.appendChild(data);
     }
