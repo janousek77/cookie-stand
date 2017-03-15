@@ -1,5 +1,13 @@
 body{
   font-family: 'Bitter', serif;
+  background-color: #444;
+}
+
+header{
+background-color: #444;
+text-align: center;
+position: relative;
+height: 235px;
 }
 
 .left {
@@ -27,11 +35,13 @@ section {
   text-align: center;
 }
 
-img{
-  position: relative;
-  width: 95%
+p{
+  margin-left: 374px;
+  position: absolute;
+  text-align: center;
 }
 
-p{
-  position: absolute;
+img{
+  position: relative;
+  width: 50%;
 }
