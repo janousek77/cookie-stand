@@ -2,6 +2,7 @@
 
 var hours = ['Stores','8am', '9am', '10am' , '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Totals'];
 var body = document.getElementsByTagName('body')[0];
+var allStores = [];
 
 var first = new Store('1st and Pike', 23, 65, 6.3);
 var seatac = new Store('Seatac Airport', 3, 24, 1.2);
@@ -42,6 +43,7 @@ function Store(sname, min, max, aveCookies) {
       tableRow.appendChild(data);
     }
   };
+  allStores.push(this);
 }
 
 function table(){
@@ -61,8 +63,6 @@ function table(){
 };
 table();
 
-first.rows();
-seatac.rows();
-seattleCenter.rows();
-capHill.rows();
-alki.rows();
+for (var i = 0; i < allStores.length; i++){
+  allStores[i].rows();
+}
