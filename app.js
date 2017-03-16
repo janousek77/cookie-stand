@@ -1,7 +1,6 @@
 'strict';
 
 var hours = ['Stores','8am', '9am', '10am' , '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Totals'];
-
 var body = document.getElementsByTagName('body')[0];
 var allStores = [];
 
@@ -72,20 +71,24 @@ var form = document.getElementById('the-form');
 function formElementSubmit(event) {
   event.preventDefault();
   var theFormItself = event.target;
-  var storeName = theFormItself.elements['storeName'].value;
-  var minCustomer = theFormItself.elements['minCustomer'].value;
-  var maxCustomer = theFormItself.elements['maxCustomer'].value;
-  var averageCookies = theFormItself.elements['averageCookies'].value;
-  // var inputs = document.getElementsByClassName('inputs');elements['
-  // var inputData = Array.prototype.slice.call(inputs);
-  // var storeInputs = [];
-  // console.log(newStore);']
-  // for (var i = 0; i < inputs.length; i++){
-  //   var data = inputData[i].value;
-  //   console.log(data);
-  //   storeInputs.push(this);
-  // }
-  var newStore = new Store(storeName, minCustomer, maxCustomer, averageCookies);
-  newStore.rows();
+  var storeName = event.target.storeName.value;
+  var minCustomer = event.target.minCustomer.value;
+  var maxCustomer = event.target.maxCustomer.value;
+  var averageCookies = event.target.averageCookies.value;
+  if (minCustomer > maxCustomer) {
+    alert('You\'re minumum is heigher than your max.');
+  } else {
+    var newStore = new Store(storeName, minCustomer, maxCustomer, averageCookies);
+    newStore.rows();
+  }
 };
 form.addEventListener('submit', formElementSubmit);
+// var inputs = document.getElementsByClassName('inputs');elements['
+// var inputData = Array.prototype.slice.call(inputs);
+// var storeInputs = [];
+// console.log(newStore);']
+// for (var i = 0; i < inputs.length; i++){
+//   var data = inputData[i].value;
+//   console.log(data);
+//   storeInputs.push(this);
+// }
