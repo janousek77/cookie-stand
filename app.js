@@ -5,12 +5,11 @@ var hours = ['Stores','8am', '9am', '10am' , '11am', '12pm', '1pm', '2pm', '3pm'
 var body = document.getElementsByTagName('body')[0];
 var allStores = [];
 
-// var first = new Store('1st and Pike', 23, 65, 6.3);
-// var seatac = new Store('Seatac Airport', 3, 24, 1.2);
-// var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
-// var capHill = new Store('Capitol Hill', 20, 38, 2.3);
-// var alki = new Store('Alki', 2, 16, 4.6);
-// var storeInputs = new Store(inputData[i]);
+var first = new Store('1st and Pike', 23, 65, 6.3);
+var seatac = new Store('Seatac Airport', 3, 24, 1.2);
+var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
+var capHill = new Store('Capitol Hill', 20, 38, 2.3);
+var alki = new Store('Alki', 2, 16, 4.6);
 
 function Store(sname, min, max, aveCookies) {
   this.name = sname;
@@ -73,12 +72,20 @@ var form = document.getElementById('the-form');
 function formElementSubmit(event) {
   event.preventDefault();
   var theFormItself = event.target;
-  var inputs = document.getElementsByClassName('inputs');
-  var inputData = inputs.value;
-  var storeInputs = [];
-  for (var i = 0; i < inputs.length; i++){
-    console.log(inputData);
-    this.storeInputs.push(inputData);
-  }
+  var storeName = theFormItself.elements['storeName'].value;
+  var minCustomer = theFormItself.elements['minCustomer'].value;
+  var maxCustomer = theFormItself.elements['maxCustomer'].value;
+  var averageCookies = theFormItself.elements['averageCookies'].value;
+  // var inputs = document.getElementsByClassName('inputs');elements['
+  // var inputData = Array.prototype.slice.call(inputs);
+  // var storeInputs = [];
+  // console.log(newStore);']
+  // for (var i = 0; i < inputs.length; i++){
+  //   var data = inputData[i].value;
+  //   console.log(data);
+  //   storeInputs.push(this);
+  // }
+  var newStore = new Store(storeName, minCustomer, maxCustomer, averageCookies);
+  newStore.rows();
 };
 form.addEventListener('submit', formElementSubmit);
