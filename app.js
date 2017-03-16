@@ -10,15 +10,17 @@ var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
 var capHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alki = new Store('Alki', 2, 16, 4.6);
 
-function Store(sname, min, max, aveCookies) {
-  this.name = sname;
-  this.minCust = min;
-  this.maxCust = max;
-  this.avgCookies = aveCookies;
+function Store(name, min, max, aveCookies) {
+  this.name = name;
+  this.minCust = parseInt(min);
+  this.maxCust = parseInt(max);
+  this.avgCookies = parseInt(aveCookies);
   this.hourlySales = [];
   this.total = 0;
   this.randomCustPerHour = function (){
-    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+    var num = Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+    console.log(num);
+    return num;
   };
   this.cookiesSold = function () {
     for (var i = 0; i < hours.length - 2; i++) {
@@ -76,10 +78,13 @@ function formElementSubmit(event) {
   var maxCustomer = event.target.maxCustomer.value;
   var averageCookies = event.target.averageCookies.value;
   if (minCustomer > maxCustomer) {
-    alert('You\'re minumum is heigher than your max.');
+    alert('You\'re minumum is heigher than your max. Wut? Try again');
   } else {
     var newStore = new Store(storeName, minCustomer, maxCustomer, averageCookies);
+    console.log(newStore);
     newStore.rows();
+
+    form.reset();
   }
 };
 form.addEventListener('submit', formElementSubmit);

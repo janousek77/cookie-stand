@@ -11,13 +11,13 @@
         <fieldset>
         <legend>Store Info</legend>
         <label>Store Name</label>
-        <input type="text" value="" class="inputs" name="storeName">
+        <input type="text" value="" class="inputs" name="storeName" required>
         <label>Minimum amount of customers: </label>
-        <input type="text" value="" class="inputs" name="minCustomer">
+        <input type="number" value="" class="inputs" name="minCustomer" step=0.01 required>
         <label> Maximum amount of customers </label>
-        <input type="text" value="" class="inputs" name="maxCustomer">
+        <input type="number" value="" class="inputs" name="maxCustomer" step=0.01 required>
         <label>Average cookies sold: </label>
-        <input type="text" value="" class="inputs" name="averageCookies">
+        <input type="number" value="" class="inputs" name="averageCookies" step=0.01 required>
         <input type="submit" value = "submit the form">
       </fieldset>
     </form>
