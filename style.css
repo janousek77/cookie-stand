@@ -11,21 +11,29 @@ header{
 .left {
   float: left;
   box-sizing: border-box;
-  width: 15%;
+  width: 20%;
   height: 970px;
+}
+section h3{
+  margin-top:  50px;
+}
+
+h3{
+ margin-top: 140px;
 }
 
 .right {
   float: left;
   box-sizing: border-box;
-  width: 15%;
+  width: 20%;
   height: 970px;
+  position: relative;
 }
 
 main {
   float: left;
   box-sizing: border-box;
-  width: 70%;
+  width: 60%;
   height: 970px;
   text-align: center;
 }
@@ -36,13 +44,13 @@ h1, h2{
 
 h2{
   top: -47px;
-  left: 674px;
+  left: 666px;
   font-size: 85px;
 }
 
 h1{
   top: 85px;
-  left: 646px;
+  left: 640px;
 }
 
 #salmon {
@@ -73,13 +81,33 @@ li{
 }
 
 nav{
-  position: relative;
-  height: 50px;
+  box-sizing: border-box;
   background-color: #336666;
-  font-size: 25px;
-  color: white;
+  height: 50px;
   width: 101%;
   left: -8px;
+  font-size: 25px;
+  position: relative;
+}
+
+nav a {
+  position: absolute;
+  margin-left: 100px;
+  top: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+#who{
+  left: 20px;
+}
+
+#mission{
+  left: 590px;
+}
+
+#calendar{
+  right: 100px;
 }
 
 #navList{
@@ -95,13 +123,33 @@ nav{
   width: 50%;
   height: 500px;
   float: left;
-  border: 1px solid #222
+  border: 1px solid #999;
+}
+
+section img{
+  margin: 50px 90px;
 }
 
 button{
   float: right;
 }
 
-.family{
+div{
+  float: right;
+}
+
+div p{
+  margin-top: 220px;
+}
+
+div img{
   width: 200px;
+}
+
+span{
+  float: right;
+}
+
+#hours{
+  text-align: center;
 }
