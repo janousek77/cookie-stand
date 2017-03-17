@@ -1,3 +1,42 @@
+body{
+  font-family: 'Bitter', serif;
+  background-color: #F2F2F2;:
+}
+
+header{
+  position: relative;
+  height: 235px;
+}
+
+h1, h2{
+  position: absolute;
+}
+
+h2{
+  top: -47px;
+  left: 666px;
+  font-size: 85px;
+}
+
+h1{
+  top: 85px;
+  left: 640px;
+}
+
+#salmon {
+    width: 28%;
+    left: 1%;
+    top: 35px;
+    position: absolute;
+}
+
+#chinook {
+  width: 27.5%;
+  right: 1%;
+  top: 23px;
+  position: absolute;
+}
+
 section{
   float: left;
   width: 200px;
@@ -5,8 +44,10 @@ section{
 
 fieldset {
     width: 50px;
+    margin-left: 350px;
 }
 
 table{
   float: left;
+  margin-left: 350px;
 }
