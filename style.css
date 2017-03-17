@@ -5,7 +5,6 @@ body{
 
 header{
 background-color: #444;
-text-align: center;
 position: relative;
 height: 235px;
 }
@@ -35,13 +34,23 @@ section {
   text-align: center;
 }
 
-p{
-  margin-left: 374px;
+h1, h2{
   position: absolute;
-  text-align: center;
 }
 
-img{
-  position: relative;
-  width: 50%;
+h2{
+  top: 120px;
+  left: 646px;
+}
+
+h1{
+  top: 85px;
+  left: 646px;
+}
+
+img {
+    width: 28%;
+    left: 1%;
+    top: 25px;
+    position: absolute;
 }

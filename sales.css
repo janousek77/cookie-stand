@@ -1,0 +1,12 @@
+section{
+  float: left;
+  width: 200px;
+}
+
+fieldset {
+    width: 50px;
+}
+
+table{
+  float: left;
+}
