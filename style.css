@@ -1,36 +1,32 @@
 body{
   font-family: 'Bitter', serif;
-  background-color: #444;
+  background-color: #F2F2F2;:
 }
 
 header{
-background-color: #444;
-position: relative;
-height: 235px;
+  position: relative;
+  height: 235px;
 }
 
 .left {
   float: left;
   box-sizing: border-box;
-  width: 25%;
+  width: 15%;
   height: 970px;
-  background: #444;
 }
 
 .right {
   float: left;
   box-sizing: border-box;
-  width: 25%;
+  width: 15%;
   height: 970px;
-  background: #444;
 }
 
-section {
+main {
   float: left;
   box-sizing: border-box;
-  width: 50%;
+  width: 70%;
   height: 970px;
-  background: #444;
   text-align: center;
 }
 
@@ -39,8 +35,9 @@ h1, h2{
 }
 
 h2{
-  top: 120px;
-  left: 646px;
+  top: -47px;
+  left: 674px;
+  font-size: 85px;
 }
 
 h1{
@@ -48,9 +45,63 @@ h1{
   left: 646px;
 }
 
-img {
+#salmon {
     width: 28%;
     left: 1%;
-    top: 25px;
+    top: 35px;
     position: absolute;
+}
+
+#social {
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    top: -10px;
+}
+
+li{
+  list-style: none;
+  display: inline;
+  cursor: pointer;
+}
+
+#chinook {
+  width: 27.5%;
+  right: 1%;
+  top: 23px;
+  position: absolute;
+}
+
+nav{
+  position: relative;
+  height: 50px;
+  background-color: #336666;
+  font-size: 25px;
+  color: white;
+  width: 101%;
+  left: -8px;
+}
+
+#navList{
+  margin-left: 50px;
+}
+
+#about{
+  margin: 50px 200px;
+}
+
+.product{
+  box-sizing: border-box;
+  width: 50%;
+  height: 500px;
+  float: left;
+  border: 1px solid #222
+}
+
+button{
+  float: right;
+}
+
+.family{
+  width: 200px;
 }
