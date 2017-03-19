@@ -36,9 +36,9 @@ function Store(name, min, max, aveCookies) {
     var tbody = document.getElementsByTagName('tbody')[0];
     var tableRow = document.createElement('tr');
     tbody.appendChild(tableRow);
-    var tdName = document.createElement('td');
-    tdName.innerText = this.name;
-    tableRow.appendChild(tdName);
+    var thName = document.createElement('th');
+    thName.innerText = this.name;
+    tableRow.appendChild(thName);
     for (var i = 0; i < hours.length - 1; i++){
       var data = document.createElement('td');
       data.innerText = this.hourlySales[i];
@@ -83,17 +83,33 @@ function formElementSubmit(event) {
     var newStore = new Store(storeName, minCustomer, maxCustomer, averageCookies);
     console.log(newStore);
     newStore.rows();
-
-    form.reset();
+    var table = document.getElementsByTagName('table')[0];
+    var tFoot = document.getElementsByTagName('tfoot')[0];
+    table.removeChild(tFoot);
+    hourlySalesTotal();
   }
+  form.reset();
 };
 form.addEventListener('submit', formElementSubmit);
-// var inputs = document.getElementsByClassName('inputs');elements['
-// var inputData = Array.prototype.slice.call(inputs);
-// var storeInputs = [];
-// console.log(newStore);']
-// for (var i = 0; i < inputs.length; i++){
-//   var data = inputData[i].value;
-//   console.log(data);
-//   storeInputs.push(this);
-// }
+
+function hourlySalesTotal() {
+  var body = document.getElementsByTagName('body')[0];
+  var table = document.getElementsByTagName('table')[0];
+  var tFoot = document.createElement('tfoot');
+  table.appendChild(tFoot);
+  var footRow = document.createElement('tr');
+  tFoot.appendChild(footRow);
+  var totalsHead = document.createElement('th');
+  totalsHead.innerText = 'Totals';
+  footRow.appendChild(totalsHead);
+  for (var i = 0; i < hours.length - 1; i++){
+    var hourlyTotalSales = 0;
+    for (var j = 0; j < allStores.length; j++){
+      hourlyTotalSales += allStores[j].hourlySales[i];
+    }
+    var footData = document.createElement('td');
+    footData.innerText = hourlyTotalSales;
+    footRow.appendChild(footData);
+  };
+}
+hourlySalesTotal();
