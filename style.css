@@ -1,6 +1,14 @@
 body{
-  font-family: 'Bitter', serif;
   background-color: #F2F2F2;:
+}
+
+p, address, li{
+color: #5A5B5B;
+}
+
+h1, h2, h3{
+  font-family: 'Bitter', serif;
+  color: #729494;
 }
 
 header{
@@ -36,6 +44,7 @@ main {
   width: 60%;
   height: 970px;
   text-align: center;
+  font-family: georgia;
 }
 
 h1, h2{
@@ -97,7 +106,10 @@ nav a {
   text-decoration: none;
   color: black;
 }
-
+main a {
+  text-decoration: none;
+  color: #729494
+}
 #who{
   left: 20px;
 }
@@ -124,6 +136,7 @@ nav a {
   height: 500px;
   float: left;
   border: 1px solid #999;
+  background-color: #C3C3C3;
 }
 
 section img{
@@ -152,4 +165,13 @@ span{
 
 #hours{
   text-align: center;
+}
+
+#sales{
+  position: absolute;
+  bottom: -520px;
+}
+
+#sales a{
+  text-decoration: none;
 }

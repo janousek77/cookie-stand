@@ -3,6 +3,11 @@ body{
   background-color: #F2F2F2;:
 }
 
+h1, h2, h3{
+  font-family: 'Bitter', serif;
+  color: #729494;
+}
+
 header{
   position: relative;
   height: 235px;
@@ -44,10 +49,27 @@ section{
 
 fieldset {
     width: 50px;
-    margin-left: 350px;
+    margin-left: 300px;
 }
 
 table{
   float: left;
-  margin-left: 350px;
+  margin-left: 300px;
+}
+
+a{
+  text-decoration: none;
+  position: absolute;
+  bottom: 175px;
+  left: 50%;
+}
+
+th, td{
+  font-family: Helvetica;
+}
+
+table {
+  border-spacing: 7px;
+  background-color: #336666;
+  color: #172648;
 }

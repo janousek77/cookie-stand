@@ -19,7 +19,6 @@ function Store(name, min, max, aveCookies) {
   this.total = 0;
   this.randomCustPerHour = function (){
     var num = Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
-    console.log(num);
     return num;
   };
   this.cookiesSold = function () {
@@ -81,7 +80,6 @@ function formElementSubmit(event) {
     alert('You\'re minumum is heigher than your max. Wut? Try again');
   } else {
     var newStore = new Store(storeName, minCustomer, maxCustomer, averageCookies);
-    console.log(newStore);
     newStore.rows();
     var table = document.getElementsByTagName('table')[0];
     var tFoot = document.getElementsByTagName('tfoot')[0];
